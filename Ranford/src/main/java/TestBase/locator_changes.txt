@@ -1,0 +1,35 @@
+	public static By getlocator(String key)
+	{
+		loadproperty2();
+		
+		By loc =null;
+		String elename =p.getProperty(key);
+		String loctype = elename.split(":")[0];
+		String locval= elename.split(":")[1];
+		
+		switch(loctype)
+		{
+		case "id":
+			
+			loc= By.id(locval);
+			break;
+			
+		case "name":
+			
+			loc = By.name(locval);		
+			break;
+			
+		case "xpath":
+			
+			loc = By.xpath(locval);
+			break;
+			
+		case "linkText":
+			
+			loc= By.linkText(locval);
+			break;
+		}
+		
+		
+		return loc;
+	}

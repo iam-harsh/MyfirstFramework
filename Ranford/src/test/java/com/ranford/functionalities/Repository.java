@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.net.SyslogAppender;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -151,9 +152,12 @@ public class Repository extends Base {
 		
 		
 	}
+
+	
 	public void logout_Application() {
 		AdminPage.branches_button(driver).click();
 		driver.close();
+		System.out.println("Project Over");
 		extentreport.endTest(extenttest);
 		extentreport.flush();
 	}

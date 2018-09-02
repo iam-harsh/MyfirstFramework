@@ -157,7 +157,7 @@ public class Repository extends Base {
 	public void logout_Application() {
 		AdminPage.branches_button(driver).click();
 		driver.close();
-		System.out.println("Project Over");
+		System.out.println("Thanks");
 		extentreport.endTest(extenttest);
 		extentreport.flush();
 	}
